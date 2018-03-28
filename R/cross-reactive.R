@@ -1,16 +1,16 @@
-#' Cross-reactive probes
+#' Cross-reactive probes/loci
 #'
-#' Get cross-reactive probe IDs from internal data
+#' Get cross-reactive probe/locus IDs from internal data
 #'
 #' @details
-#' The cross-reactive probes of EPIC/850K are from papers:
+#' The cross-reactive probes/loci of EPIC/850K are from papers:
 #'
 #' \enumerate{
 #'   \item \href{https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1066-1}{Pidsley et al., Critical evaluation of the Illumina MethylationEPIC BeadChip microarray for whole-genome DNA methylation profiling. Genome Biology (2016)}
 #'   \item \href{https://www.sciencedirect.com/science/article/pii/S221359601630071X}{McCartney et al., Identification of polymorphic and off-target probe binding sites on the Illumina Infinium MethylationEPIC BeadChip. Genomics Data (2016)}
 #' }
 #'
-#' The cross-reactive probes of 450K are from papers:
+#' The cross-reactive probes/loci of 450K are from papers:
 #'
 #' \enumerate{
 #'   \item \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3592906/}{Chen et al., Discovery of cross-reactive probes and polymorphic CpGs in the Illumina Infinium HumanMethylation450 microarray. Epigenetics (2013)}
@@ -22,7 +22,7 @@
 #' @return A character vector of probe IDs
 #' @export
 #' @examples
-#' xreactive_probes <- xreactive_probes()
+#' xloci <- xreactive_probes()
 xreactive_probes <- function(array_type = "EPIC") {
   if (array_type == "EPIC") {
     return(xreactive_probes_epic)
