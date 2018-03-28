@@ -6,3 +6,4 @@
 # man
 NAMESPACE
 man/*.Rd
+inst/doc
