@@ -10,6 +10,9 @@ Description: Maxprobes package collects cross-reactive probes of Illumina
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
+Imports:
+    minfi
+RoxygenNote: 6.0.1
 Suggests: knitr,
     rmarkdown
 VignetteBuilder: knitr
