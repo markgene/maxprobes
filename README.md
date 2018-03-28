@@ -1,3 +1,10 @@
+## Install
+
+```{r, install_maxprobes}
+if (! ("devtools" %in% installed.packages()) install.packages("devtools")
+devtools::install_github("markgene/maxprobes")
+```
+
 ## Drop cross-reactive probes from `minfi` objects
 
 Use the example data set in `minfiData`, which is 450K array comprising of 3 cancer samples and 3 normal controls.
