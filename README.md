@@ -1,3 +1,17 @@
+## Cross-reactive probes/loci of methylation array
+
+The `maxprobes` R package collects cross-reactive probes of Illumina methylation array 450K and EPIC/850K from papers. The cross-reactive probes/loci of EPIC/850K are from papers:
+
+* [Pidsley et al., Critical evaluation of the Illumina MethylationEPIC BeadChip microarray for whole-genome DNA methylation profiling. Genome Biology (2016)](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1066-1)
+
+* [McCartney et al., Identification of polymorphic and off-target probe binding sites on the Illumina Infinium MethylationEPIC BeadChip. Genomics Data (2016)](https://www.sciencedirect.com/science/article/pii/S221359601630071X)
+
+Those of 450K are from papers:
+
+* [Chen et al., Discovery of cross-reactive probes and polymorphic CpGs in the Illumina Infinium HumanMethylation450 microarray. Epigenetics (2013)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3592906/)
+
+* [Benton et al., An analysis of DNA methylation in human adipose tissue reveals differential modification of obesity genes before and after gastric bypass and weight loss. Genome Biology (2015)](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0569-x)
+
 ## Install
 
 ```{r, install_maxprobes}
