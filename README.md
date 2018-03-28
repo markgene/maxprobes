@@ -1,0 +1,31 @@
+## Drop cross-reactive probes from `minfi` objects
+
+Use the example data set in `minfiData`, which is 450K array comprising of 3 cancer samples and 3 normal controls.
+
+```{r, load_minfi_data}
+suppressPackageStartupMessages(library(minfiData))
+data(MsetEx)
+MsetEx
+```
+
+Call `dropXreactiveLoci` function to remove cross-reactive probes/loci:
+
+```{r, drop_demo}
+library(maxprobes)
+MsetEx_noXloci <- maxprobes::dropXreactiveLoci(MsetEx)
+MsetEx_noXloci
+```
+
+The probe/locus number (first number on `dim` row) drops from `r nrow(MsetEx)` to `r nrow(MsetEx_noXloci)`.
+
+## Obtain cross-reactive probe/loci IDs
+
+If you need to get the list of probes/loci (e.g. you do not use `minfi` objects), you can get it by `xreactive_probes` function. It takes an argument `array_type` which is either "EPIC" or "450K", for EPIC/850K and 450K arrays, respectively.
+
+```{r, xloci_demo}
+xloci <- maxprobes::xreactive_probes(array_type = "EPIC")
+length(xloci)
+
+xloci <- maxprobes::xreactive_probes(array_type = "450K")
+length(xloci)
+```
