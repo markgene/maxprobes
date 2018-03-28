@@ -34,6 +34,29 @@ xreactive_probes <- function(array_type = "EPIC") {
 }
 
 
+#' Drop cross-reactive probes/loci
+#'
+#' Remove cross-reactive probes from
+#'
+#' @param x A \code{minfi} object
+#' @return An object of the same kind as the input, possibly with fewer
+#' loci.
+#' @examples
+#' \dontrun{
+#' suppressPackageStartupMessages(library(minfiData))
+#' data(MsetEx)
+#' MsetEx_noXloci <- dropXreactiveLoci(MsetEx)
+#' nrow(MsetEx) - nrow(MsetEx_noXloci)
+#' }
+#' @export
+dropXreactiveLoci <- function(x) {
+  array_type <- get_array_type(x)
+  xloci <- xreactive_probes(array_type = array_type)
+  keep <- !(minfi::featureNames(x) %in% xloci)
+  return(x[keep, ])
+}
+
+
 ########################## Read raw data #######################
 
 #' Read cross-reactive probes of 450K array from Chen et. al.
