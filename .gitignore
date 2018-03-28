@@ -2,8 +2,4 @@
 .Rhistory
 .RData
 .Ruserdata
-
-# man
-NAMESPACE
-man/*.Rd
 inst/doc
