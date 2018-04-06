@@ -5,6 +5,7 @@
 #'
 #' @param x An object containing annotation information
 #' @return A character scale of either "EPIC" or "450K"
+#' @noRd
 get_array_type <- function(x) {
   anno_info <- annotation(x)
   if (anno_info["array"] == "IlluminaHumanMethylationEPIC") {

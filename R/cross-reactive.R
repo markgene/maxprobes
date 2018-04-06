@@ -69,6 +69,7 @@ dropXreactiveLoci <- function(x) {
 #' \href{https://github.com/sirselim/illumina450k_filtering}{GitHub: sirselim/illumina450k_filtering}.
 #'
 #' @return A character vector of probe IDs
+#' @noRd
 read_xreactive_probes_450k_chen <- function() {
   infile <- system.file("extdata", "48639-non-specific-probes-Illumina450k.csv", package = "sjma")
   xreactive_probes <- read.csv(infile, stringsAsFactors = FALSE)
@@ -87,6 +88,7 @@ read_xreactive_probes_450k_chen <- function() {
 #' \href{https://github.com/sirselim/illumina450k_filtering}{GitHub: sirselim/illumina450k_filtering}.
 #'
 #' @return A character vector of probe IDs
+#' @noRd
 read_xreactive_probes_450k_benton <- function() {
   infile <- system.file("extdata", "HumanMethylation450_15017482_v.1.1_hg19_bowtie_multimap.txt", package = "sjma")
   xreactive_probes <- read.csv(infile, stringsAsFactors = FALSE, header = FALSE)
@@ -106,6 +108,7 @@ read_xreactive_probes_450k_benton <- function() {
 #' \href{https://github.com/sirselim/illumina450k_filtering}{GitHub: sirselim/illumina450k_filtering}.
 #'
 #' @return A character vector of probe IDs
+#' @noRd
 read_xreactive_probes_epic_pidsley <- function() {
   infile <- system.file("extdata", "13059_2016_1066_MOESM1_ESM.csv", package = "sjma")
   xreactive_probes <- read.csv(infile, stringsAsFactors = FALSE, header = TRUE)
@@ -122,6 +125,7 @@ read_xreactive_probes_epic_pidsley <- function() {
 #' The cross-reactive probes are downloaded from Table S2 and S3.
 #'
 #' @return A character vector of probe IDs
+#' @noRd
 read_xreactive_probes_epic_mccartney <- function() {
   s2_file <- system.file("extdata", "1-s2.0-S221359601630071X-mmc2.txt", package = "sjma")
   s3_file <- system.file("extdata", "1-s2.0-S221359601630071X-mmc3.txt", package = "sjma")

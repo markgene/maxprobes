@@ -3,6 +3,7 @@
 #' Generate internal data available to package functions.
 #'
 #' @return NULL
+#' @noRd
 generate_internal_data <- function() {
   # Cross-reactive probes 450K
   xreactive_probes_450k_chen <- read_xreactive_probes_450k_chen()

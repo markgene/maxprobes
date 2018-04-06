@@ -1,7 +1,7 @@
 Package: maxprobes
 Type: Package
 Title: Methylation Array Cross-Reactive Probes
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: c(
     person("Mark", "Chen", email = "mjchen.gene@gmail.com", role = "cre"))
 Maintainer: Mark J Chen <mjchen.gene@gmail.com>
