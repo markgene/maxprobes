@@ -1,3 +1,5 @@
+[![Travis-CI Build Status](https://travis-ci.org/markgene/maxprobes.svg?branch=master)](https://travis-ci.org/markgene/maxprobes)
+
 ## Cross-reactive probes/loci of methylation array
 
 The `maxprobes` R package collects cross-reactive probes of Illumina methylation array 450K and EPIC/850K from papers. The cross-reactive probes/loci of EPIC/850K are from papers:
