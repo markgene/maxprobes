@@ -72,7 +72,7 @@ dropXreactiveLoci <- function(x) {
 #' @noRd
 read_xreactive_probes_450k_chen <- function() {
   infile <- system.file("extdata", "48639-non-specific-probes-Illumina450k.csv", package = "sjma")
-  xreactive_probes <- read.csv(infile, stringsAsFactors = FALSE)
+  xreactive_probes <- utils::read.csv(infile, stringsAsFactors = FALSE)
   xreactive_probes_450k_chen <- as.character(xreactive_probes$TargetID)
   return(xreactive_probes_450k_chen)
 }
@@ -91,7 +91,7 @@ read_xreactive_probes_450k_chen <- function() {
 #' @noRd
 read_xreactive_probes_450k_benton <- function() {
   infile <- system.file("extdata", "HumanMethylation450_15017482_v.1.1_hg19_bowtie_multimap.txt", package = "sjma")
-  xreactive_probes <- read.csv(infile, stringsAsFactors = FALSE, header = FALSE)
+  xreactive_probes <- utils::read.csv(infile, stringsAsFactors = FALSE, header = FALSE)
   xreactive_probes_450k_benton <- as.character(xreactive_probes$V1)
   return(xreactive_probes_450k_benton)
 }
@@ -111,7 +111,7 @@ read_xreactive_probes_450k_benton <- function() {
 #' @noRd
 read_xreactive_probes_epic_pidsley <- function() {
   infile <- system.file("extdata", "13059_2016_1066_MOESM1_ESM.csv", package = "sjma")
-  xreactive_probes <- read.csv(infile, stringsAsFactors = FALSE, header = TRUE)
+  xreactive_probes <- utils::read.csv(infile, stringsAsFactors = FALSE, header = TRUE)
   return(as.character(xreactive_probes[, 1]))
 }
 
@@ -129,8 +129,8 @@ read_xreactive_probes_epic_pidsley <- function() {
 read_xreactive_probes_epic_mccartney <- function() {
   s2_file <- system.file("extdata", "1-s2.0-S221359601630071X-mmc2.txt", package = "sjma")
   s3_file <- system.file("extdata", "1-s2.0-S221359601630071X-mmc3.txt", package = "sjma")
-  xreactive_probes_cpg <- read.csv(s2_file, stringsAsFactors = FALSE, header = FALSE)
-  xreactive_probes_noncpg <- read.csv(s3_file, stringsAsFactors = FALSE, header = FALSE)
+  xreactive_probes_cpg <- rutils::ead.csv(s2_file, stringsAsFactors = FALSE, header = FALSE)
+  xreactive_probes_noncpg <- utils::read.csv(s3_file, stringsAsFactors = FALSE, header = FALSE)
   xreactive_probes <- unique(c(xreactive_probes_cpg, xreactive_probes_noncpg))
   return(xreactive_probes)
 }
