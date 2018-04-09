@@ -7,7 +7,7 @@
 #' @return A character scale of either "EPIC" or "450K"
 #' @noRd
 get_array_type <- function(x) {
-  anno_info <- annotation(x)
+  anno_info <- minfi::annotation(x)
   if (anno_info["array"] == "IlluminaHumanMethylationEPIC") {
     return("EPIC")
   } else if (anno_info["array"] == "IlluminaHumanMethylation450k") {
