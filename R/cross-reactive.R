@@ -129,7 +129,7 @@ read_xreactive_probes_epic_pidsley <- function() {
 read_xreactive_probes_epic_mccartney <- function() {
   s2_file <- system.file("extdata", "1-s2.0-S221359601630071X-mmc2.txt", package = "sjma")
   s3_file <- system.file("extdata", "1-s2.0-S221359601630071X-mmc3.txt", package = "sjma")
-  xreactive_probes_cpg <- rutils::ead.csv(s2_file, stringsAsFactors = FALSE, header = FALSE)
+  xreactive_probes_cpg <- rutils::read.csv(s2_file, stringsAsFactors = FALSE, header = FALSE)
   xreactive_probes_noncpg <- utils::read.csv(s3_file, stringsAsFactors = FALSE, header = FALSE)
   xreactive_probes <- unique(c(xreactive_probes_cpg, xreactive_probes_noncpg))
   return(xreactive_probes)
